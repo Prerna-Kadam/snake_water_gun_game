@@ -10,7 +10,10 @@ youstr = input("Enter your choice (s/w/g) : ")
 youDict = {"s" : 1, "w" : -1, "g" : 0}
 reversed_Dict = {1 : "Snake", -1 : "Water", 0 : "Gun"}
 
-you = youDict[youstr]
+if youstr not in youDict:
+    print("Invalid Choice! Please enter only s, w or g.")
+else:
+    you = youDict[youstr]
 
 print(f"you chose {reversed_Dict[you]}\ncomputer chose {reversed_Dict[computer]}")
 
